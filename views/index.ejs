@@ -1,1 +1,41 @@
-<h1>Bem-vindo ao Vuln Web Lab</h1><ul><li><a href='/login'>Login</a></li><li><a href='/sqli'>SQLi</a></li><li><a href='/ssrf'>SSRF</a></li><li><a href='/pollution'>Parameter Pollution</a></li><li><a href='/deser/set'>Deserialization</a></li></ul>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>🔓 Vuln Web Lab</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main>
+    <h1>🔓 Vuln Web Lab</h1>
+    <p>Ambiente de testes com vulnerabilidades intencionais para fins educacionais.</p>
+
+    <section class="cards">
+      <a href="/login" class="card">
+        <h2>🔐 Account Takeover</h2>
+        <p>Exploração de autenticação fraca e manipulação de JWT.</p>
+      </a>
+
+      <a href="/sqli?search=' OR 1=1--" class="card">
+        <h2>💉 SQL Injection</h2>
+        <p>Injeção de comandos SQL via parâmetros de busca.</p>
+      </a>
+
+      <a href="/ssrf?url=http://127.0.0.1:8888" class="card">
+        <h2>🌐 SSRF</h2>
+        <p>Requisições internas maliciosas feitas pelo servidor.</p>
+      </a>
+
+      <a href="/pollution?role=admin&role=user" class="card">
+        <h2>🧪 Parameter Pollution</h2>
+        <p>Parâmetros duplicados para burlar lógica de autorização.</p>
+      </a>
+
+      <a href="/deser/set" class="card">
+        <h2>💣 Insecure Deserialization</h2>
+        <p>Manipulação de objetos desserializados sem validação.</p>
+      </a>
+    </section>
+  </main>
+</body>
+</html>
